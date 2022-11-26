@@ -1,0 +1,13 @@
+
+# Backup database in RPI4 (Linux)
+
+pg_dump -U username -W -F p database_name > backup.sql
+
+# -U user
+# -W ask password before backup
+# -F file format
+# p  sql plain-text  
+
+# Restore database in other database
+
+psql -U user_name -d new_database_name < backup.sql
