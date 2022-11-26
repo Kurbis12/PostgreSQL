@@ -1,0 +1,9 @@
+# Sometimes we make fast tables and don't think what data type we need or we just make a mistake.
+
+# To know if we can change data type use:
+SELECT CAST(column_name AS DECIMAL ) From table_name  
+
+# For example we have table (test_table) and column named (size)(and size column data type is text and we need change that to integer
+
+alter table test_table
+alter column size type decimal(5,2) using (size::decimal(5,2))  
