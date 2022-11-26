@@ -1,0 +1,21 @@
+# Change value in  multiple rows for many deferent conditions
+
+UPDATE table_name
+SET column_name_you_what_to_update1 = 'new_value1', column_name_you_what_to_update2 = 'new_value2'
+where condition1 = 'value_of_condition1'
+or condition2 = 'value_of_condition2'
+or condition3 = 'value_of_condition3'
+or condition4 = 'value_of_condition4'
+or condition5 = 'value_of_condition5'
+
+# For example we have table (test_table) and we whant to change value in (progress) and (date) column using (sort_code) column values
+
+update test_table
+set progress = 'active', date = '2022-10-17'
+where sort_code = '12345'
+or sort_code = '54321'
+or sort_code = '21345'
+or sort_code = '32541'
+or sort_code = '51243'
+
+# So we have change value in column (progress) and (date)
